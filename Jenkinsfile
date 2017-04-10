@@ -6,5 +6,10 @@ pipeline {
         sh 'ping -c 10 ya.ru'
       }
     }
+    stage('') {
+      steps {
+        sleep 3
+      }
+    }
   }
 }
