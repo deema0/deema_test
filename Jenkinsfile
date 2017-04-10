@@ -3,7 +3,16 @@ pipeline {
   stages {
     stage('puk-puk') {
       steps {
-        sh 'ping -c 10 ya.ru'
+        parallel(
+          "puk-puk": {
+            sh 'ping -c 10 ya.ru'
+            
+          },
+          "": {
+            sh 'ping -c 5 yahoo.com'
+            
+          }
+        )
       }
     }
     stage('error') {
