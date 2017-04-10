@@ -6,12 +6,7 @@ pipeline {
         sh 'ping -c 10 ya.ru'
       }
     }
-    stage('sleep') {
-      steps {
-        sleep 3
-      }
-    }
-    stage('') {
+    stage('error') {
       steps {
         sh 'traceroute google.com'
       }
