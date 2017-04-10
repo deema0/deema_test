@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('puk-puk') {
       steps {
-        sh 'ping ya.ru'
+        sh 'ping -c 10 ya.ru'
       }
     }
   }
